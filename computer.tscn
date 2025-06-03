@@ -1,11 +1,11 @@
-[gd_scene load_steps=39 format=3 uid="uid://d3p77dmxw703m"]
+[gd_scene load_steps=39 format=3 uid="uid://c33ngkdsilupe"]
 
 [ext_resource type="Shader" path="res://screen.gdshader" id="1_2fbpl"]
 [ext_resource type="Texture2D" uid="uid://drsqx11rqhsdy" path="res://assets/computer/computer_Outline.png" id="1_6frv7"]
 [ext_resource type="Script" path="res://computer.gd" id="1_l3hoc"]
 [ext_resource type="Texture2D" uid="uid://x17op7jfprcp" path="res://assets/computer/orgChartIcon.png" id="2_jqk1y"]
 [ext_resource type="Texture2D" uid="uid://dky5lw4dow4ax" path="res://assets/computer/mapIcon.png" id="2_pv5vf"]
-[ext_resource type="PackedScene" uid="uid://bgxewtdquxhvj" path="res://mapButton.tscn" id="2_yunob"]
+[ext_resource type="PackedScene" uid="uid://c8rj6b22vnkd8" path="res://mapButton.tscn" id="2_yunob"]
 [ext_resource type="Texture2D" uid="uid://c4764ylqobodu" path="res://assets/computer/mapIconHover.png" id="3_ugah7"]
 [ext_resource type="Texture2D" uid="uid://dr37bs4ciet53" path="res://assets/computer/mapIconClick.png" id="5_dosyx"]
 [ext_resource type="Texture2D" uid="uid://64axso6dxyaj" path="res://assets/computer/vmIcon.png" id="6_haddu"]

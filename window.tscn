@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bemndkmju8kvd"]
+[gd_scene load_steps=6 format=3 uid="uid://scbyr8okghml"]
 
 [ext_resource type="Script" path="res://ui_assistance/window.gd" id="1_r17bh"]
 [ext_resource type="Texture2D" uid="uid://cbo3ol6bog3x2" path="res://assets/computer/window_surroundings.png" id="2_jci2n"]

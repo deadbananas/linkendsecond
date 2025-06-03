@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgbw53lal6x5e"]
 
 [ext_resource type="Script" path="res://applications_Main/org_chart.gd" id="1_ryovf"]
-[ext_resource type="PackedScene" uid="uid://bemndkmju8kvd" path="res://window.tscn" id="2_bpn6m"]
+[ext_resource type="PackedScene" uid="uid://scbyr8okghml" path="res://window.tscn" id="2_bpn6m"]
 
 [node name="OrgChart" type="Node2D"]
 script = ExtResource("1_ryovf")

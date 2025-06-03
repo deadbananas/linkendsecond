@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dibjfxk4wr5af"]
+[gd_scene load_steps=4 format=3 uid="uid://bkjd2kt0uxpk3"]
 
 [ext_resource type="Shader" path="res://screen.gdshader" id="1_4wa0q"]
-[ext_resource type="PackedScene" uid="uid://d3p77dmxw703m" path="res://computer.tscn" id="1_ta41t"]
+[ext_resource type="PackedScene" uid="uid://c33ngkdsilupe" path="res://computer.tscn" id="1_ta41t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6548l"]
 shader = ExtResource("1_4wa0q")

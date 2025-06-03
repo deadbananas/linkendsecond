@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dv4yjf3t2twqj"]
 
 [ext_resource type="Script" path="res://applications_Main/map.gd" id="1_pvmt7"]
-[ext_resource type="PackedScene" uid="uid://bemndkmju8kvd" path="res://window.tscn" id="2_fd07r"]
+[ext_resource type="PackedScene" uid="uid://scbyr8okghml" path="res://window.tscn" id="2_fd07r"]
 [ext_resource type="Texture2D" uid="uid://crmr4pw3s3bpm" path="res://assets/map/CsuiteMap.png" id="3_4sx5h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kn4gt"]

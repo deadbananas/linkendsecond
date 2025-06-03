@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3nu5iw2bhmid"]
 
 [ext_resource type="Script" path="res://applications_Main/vm.gd" id="1_uba5o"]
-[ext_resource type="PackedScene" uid="uid://bemndkmju8kvd" path="res://window.tscn" id="2_fd2gw"]
+[ext_resource type="PackedScene" uid="uid://scbyr8okghml" path="res://window.tscn" id="2_fd2gw"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://samples/addons/Themes/Classic95/Classic95.tres" id="3_7lt14"]
 [ext_resource type="Texture2D" uid="uid://dv04ie4ajj5he" path="res://assets/hosts/defaults/vm-back-default.png" id="4_8mihr"]
 
