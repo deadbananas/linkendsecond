@@ -50,3 +50,7 @@ func _on_clicked_in_input_event(viewport, event, shape_idx):
 		top.emit()
 		if !mouse_in:
 			self.get_viewport().set_input_as_handled()
+
+
+func _on_control_gui_input(event):
+	print(event)

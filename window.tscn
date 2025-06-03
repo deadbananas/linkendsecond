@@ -1,16 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://scbyr8okghml"]
+[gd_scene load_steps=4 format=3 uid="uid://scbyr8okghml"]
 
 [ext_resource type="Script" path="res://ui_assistance/window.gd" id="1_r17bh"]
 [ext_resource type="Texture2D" uid="uid://cbo3ol6bog3x2" path="res://assets/computer/window_surroundings.png" id="2_jci2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crl3r"]
 size = Vector2(946, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eyla"]
-size = Vector2(946, 580)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_23csb"]
-size = Vector2(33, 549.5)
 
 [node name="Window" type="CharacterBody2D"]
 position = Vector2(257, 192)
@@ -44,13 +38,8 @@ flat = true
 [node name="clicked_in" type="Area2D" parent="."]
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="clicked_in"]
-position = Vector2(685, 295)
-shape = SubResource("RectangleShape2D_5eyla")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="clicked_in"]
-position = Vector2(1175, 311)
-shape = SubResource("RectangleShape2D_23csb")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="clicked_in"]
+polygon = PackedVector2Array(212, 6, 1158, 6, 1158, 36, 1192, 36, 1192, 586, 212, 585)
 
 [connection signal="mouse_entered" from="windowBar" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="windowBar" to="." method="mouse_exited"]

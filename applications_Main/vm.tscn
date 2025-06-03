@@ -45,6 +45,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(396.055, 0)
 layout_mode = 2
 placeholder_text = "enter hostname here"
+clear_button_enabled = true
 
 [node name="Back_button" type="Button" parent="Window/Control/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(109.54, 0)
@@ -62,12 +63,7 @@ layout_mode = 2
 text_overrun_behavior = 1
 clip_text = true
 
-[node name="Control2" type="Control" parent="Window/Control"]
-anchors_preset = 0
-offset_right = 960.0
-offset_bottom = 540.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Window/Control/Control2"]
+[node name="Sprite2D" type="Sprite2D" parent="Window/Control"]
 texture_filter = 1
 position = Vector2(480, 286.25)
 scale = Vector2(3.52941, 3.31699)
@@ -75,3 +71,4 @@ texture = ExtResource("4_8mihr")
 
 [connection signal="closed" from="Window" to="." method="_on_window_closed"]
 [connection signal="top" from="Window" to="." method="_on_window_top"]
+[connection signal="text_submitted" from="Window/Control/VBoxContainer/HBoxContainer/Hostname_enter" to="." method="_on_hostname_enter_text_submitted"]

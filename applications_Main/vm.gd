@@ -43,14 +43,9 @@ func _on_hostname_enter_text_submitted(new_text):
 	history.add_item(new_text, itemListNumber)
 	itemListNumber += 1
 
-
-func _on_vm_window_closed():
-	close()
-
-
 func _on_window_top():
 	vmTop.emit()
 
 
 func _on_window_closed():
-	pass # Replace with function body.
+	close()
