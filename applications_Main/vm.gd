@@ -50,3 +50,7 @@ func _on_vm_window_closed():
 
 func _on_window_top():
 	vmTop.emit()
+
+
+func _on_window_closed():
+	pass # Replace with function body.

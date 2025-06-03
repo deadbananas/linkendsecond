@@ -44,16 +44,7 @@ func mouse_exited():
 func _on_close_pressed():
 	closed.emit()
 
-func pass_input(event: InputEvent, shape_idx):
-	if event is InputEventMouseButton:
-		print("top")
-		top.emit()
-		if !mouse_in:
-			self.get_viewport().set_input_as_handled()
-
 func _on_clicked_in_input_event(viewport, event, shape_idx):
-	print(viewport)
-	print(shape_idx)
 	if event is InputEventMouseButton:
 		print("top")
 		top.emit()

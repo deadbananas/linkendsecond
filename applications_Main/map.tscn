@@ -71,3 +71,6 @@ texture_filter = 1
 position = Vector2(959, 498)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7wq3t")
+
+[connection signal="closed" from="Window" to="." method="_on_window_closed"]
+[connection signal="top" from="Window" to="." method="_on_window_top"]

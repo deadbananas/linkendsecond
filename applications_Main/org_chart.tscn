@@ -7,3 +7,6 @@
 script = ExtResource("1_ryovf")
 
 [node name="Window" parent="." instance=ExtResource("2_bpn6m")]
+
+[connection signal="closed" from="Window" to="." method="_on_window_closed"]
+[connection signal="top" from="Window" to="." method="_on_window_top"]
