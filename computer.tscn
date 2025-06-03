@@ -1,0 +1,320 @@
+[gd_scene load_steps=39 format=3 uid="uid://d3p77dmxw703m"]
+
+[ext_resource type="Shader" path="res://screen.gdshader" id="1_2fbpl"]
+[ext_resource type="Texture2D" uid="uid://drsqx11rqhsdy" path="res://assets/computer/computer_Outline.png" id="1_6frv7"]
+[ext_resource type="Script" path="res://computer.gd" id="1_l3hoc"]
+[ext_resource type="Texture2D" uid="uid://x17op7jfprcp" path="res://assets/computer/orgChartIcon.png" id="2_jqk1y"]
+[ext_resource type="Texture2D" uid="uid://dky5lw4dow4ax" path="res://assets/computer/mapIcon.png" id="2_pv5vf"]
+[ext_resource type="PackedScene" uid="uid://bgxewtdquxhvj" path="res://mapButton.tscn" id="2_yunob"]
+[ext_resource type="Texture2D" uid="uid://c4764ylqobodu" path="res://assets/computer/mapIconHover.png" id="3_ugah7"]
+[ext_resource type="Texture2D" uid="uid://dr37bs4ciet53" path="res://assets/computer/mapIconClick.png" id="5_dosyx"]
+[ext_resource type="Texture2D" uid="uid://64axso6dxyaj" path="res://assets/computer/vmIcon.png" id="6_haddu"]
+[ext_resource type="Texture2D" uid="uid://cy814rhnrh8yx" path="res://assets/computer/vmIconClicked.png" id="7_v8veo"]
+[ext_resource type="Texture2D" uid="uid://b2f4c4l4uoj22" path="res://assets/computer/vmIconHover.png" id="8_28csw"]
+[ext_resource type="Texture2D" uid="uid://dq8l7w5r45nib" path="res://assets/computer/orgChartIconClicked.png" id="10_pkf2y"]
+[ext_resource type="Texture2D" uid="uid://bq56idl1x3lhq" path="res://assets/computer/orgChartIconHover.png" id="11_q76ef"]
+[ext_resource type="Texture2D" uid="uid://nw3rwfgijexw" path="res://assets/computer/notesIcon.png" id="14_xsq5o"]
+[ext_resource type="Texture2D" uid="uid://c566gjf27n2p7" path="res://assets/computer/notesIconClicked.png" id="15_3cuqr"]
+[ext_resource type="Texture2D" uid="uid://m8pa3wtfc461" path="res://assets/computer/notesIconHover.png" id="16_ef5j6"]
+[ext_resource type="Theme" uid="uid://cgkq7g4rgg26w" path="res://assets/ui/base_theme.tres" id="17_auvd5"]
+[ext_resource type="Texture2D" uid="uid://bxbn8br8gk805" path="res://assets/computer/messageIcon.png" id="17_cllsa"]
+[ext_resource type="Texture2D" uid="uid://dafdei7wp7buh" path="res://assets/computer/messageClicked.png" id="18_88d8y"]
+[ext_resource type="Texture2D" uid="uid://14nk1qk5dro1" path="res://assets/computer/bell.png" id="18_f5fpk"]
+[ext_resource type="Texture2D" uid="uid://jagqvjtmey2d" path="res://assets/computer/messageHover.png" id="19_6a4al"]
+[ext_resource type="Texture2D" uid="uid://c2qcc2e0u5xud" path="res://assets/computer/notif.png" id="22_f1yve"]
+[ext_resource type="PackedScene" uid="uid://dv4yjf3t2twqj" path="res://applications_Main/map.tscn" id="23_tctgl"]
+[ext_resource type="PackedScene" uid="uid://d3nu5iw2bhmid" path="res://applications_Main/vm.tscn" id="24_bo3j5"]
+[ext_resource type="PackedScene" uid="uid://dgbw53lal6x5e" path="res://applications_Main/org_chart.tscn" id="25_el42e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c6qlo"]
+shader = ExtResource("1_2fbpl")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.155
+shader_parameter/scanlines_width = 0.041
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.386
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.3
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.47
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.02
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.427
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b82x2"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rh3v"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3plf"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65lbe"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuyve"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlvtt"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0q8a"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qm1i"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx5nc"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nome6"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp6b5"]
+atlas = ExtResource("18_f5fpk")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pxp6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b82x2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rh3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3plf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65lbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuyve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlvtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0q8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qm1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx5nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nome6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp6b5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Computer" type="Node2D"]
+script = ExtResource("1_l3hoc")
+
+[node name="Screen" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(6, 6)
+texture = ExtResource("1_6frv7")
+
+[node name="EFFECT" type="ColorRect" parent="Screen"]
+top_level = true
+z_index = 16
+material = SubResource("ShaderMaterial_c6qlo")
+offset_left = 144.0
+offset_top = 42.0
+offset_right = 1776.0
+offset_bottom = 960.0
+
+[node name="Icons" type="Node2D" parent="."]
+
+[node name="Map" parent="Icons" instance=ExtResource("2_yunob")]
+texture_filter = 1
+offset_left = 163.0
+offset_top = 55.0
+offset_right = 195.0
+offset_bottom = 87.0
+scale = Vector2(4, 4)
+texture_pressed = ExtResource("5_dosyx")
+
+[node name="VM" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 164.0
+offset_top = 215.0
+offset_right = 196.0
+offset_bottom = 247.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("6_haddu")
+texture_pressed = ExtResource("7_v8veo")
+texture_hover = ExtResource("8_28csw")
+
+[node name="OrgChart" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 164.0
+offset_top = 375.0
+offset_right = 196.0
+offset_bottom = 407.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_jqk1y")
+texture_pressed = ExtResource("10_pkf2y")
+texture_hover = ExtResource("11_q76ef")
+
+[node name="mapSmall" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 715.0
+offset_top = 894.0
+offset_right = 747.0
+offset_bottom = 926.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_pv5vf")
+texture_pressed = ExtResource("5_dosyx")
+texture_hover = ExtResource("3_ugah7")
+
+[node name="VMSmall" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 894.0
+offset_right = 876.0
+offset_bottom = 926.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("6_haddu")
+texture_pressed = ExtResource("7_v8veo")
+texture_hover = ExtResource("8_28csw")
+
+[node name="OrgChartSmall" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 973.0
+offset_top = 894.0
+offset_right = 1005.0
+offset_bottom = 926.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_jqk1y")
+texture_pressed = ExtResource("10_pkf2y")
+texture_hover = ExtResource("11_q76ef")
+
+[node name="Notes" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 1102.0
+offset_top = 894.0
+offset_right = 1134.0
+offset_bottom = 926.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("14_xsq5o")
+texture_pressed = ExtResource("15_3cuqr")
+texture_hover = ExtResource("16_ef5j6")
+
+[node name="MessagesButton" type="TextureButton" parent="Icons"]
+texture_filter = 1
+offset_left = 1591.0
+offset_top = 215.0
+offset_right = 1623.0
+offset_bottom = 247.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("17_cllsa")
+texture_pressed = ExtResource("18_88d8y")
+texture_hover = ExtResource("19_6a4al")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1500.0
+offset_top = 912.0
+offset_right = 1752.0
+offset_bottom = 948.0
+theme = ExtResource("17_auvd5")
+
+[node name="time" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -13.0
+offset_right = 105.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MAY 23 2033 08:03"
+
+[node name="bell" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1408, 929)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_pxp6q")
+
+[node name="notif" type="Sprite2D" parent="bell"]
+visible = false
+texture_filter = 1
+position = Vector2(8, -5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_f1yve")
+
+[node name="Applications" type="Node2D" parent="."]
+
+[node name="Map" parent="Applications" instance=ExtResource("23_tctgl")]
+visible = false
+
+[node name="VM" parent="Applications" instance=ExtResource("24_bo3j5")]
+visible = false
+
+[node name="OrgChart" parent="Applications" instance=ExtResource("25_el42e")]
+visible = false
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 0.001
+gravity_scale = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+position = Vector2(960, 540)
+scale = Vector2(6, 6)
+polygon = PackedVector2Array(-135.833, -82.8333, 136, -82.8333, 136, 69.8333, -135.5, 70.8333, -136, -81.5, -140.167, -77.3333, -140, 74.8333, 140.833, 74.3333, 139.667, -87.8333, -140.833, -87.8333)
+
+[connection signal="map_open" from="." to="Applications/Map" method="_on_computer_map_open"]
+[connection signal="map_open" from="." to="Applications/VM" method="_on_computer_map_open"]
+[connection signal="map_open" from="." to="Applications/OrgChart" method="_on_computer_map_open"]
+[connection signal="org_chart_opened" from="." to="Applications/Map" method="_on_computer_org_chart_opened"]
+[connection signal="org_chart_opened" from="." to="Applications/VM" method="_on_computer_org_chart_opened"]
+[connection signal="org_chart_opened" from="." to="Applications/OrgChart" method="_on_computer_org_chart_opened"]
+[connection signal="vm_open" from="." to="Applications/Map" method="_on_computer_vm_open"]
+[connection signal="vm_open" from="." to="Applications/VM" method="_on_computer_vm_open"]
+[connection signal="vm_open" from="." to="Applications/OrgChart" method="_on_computer_vm_open"]
+[connection signal="pressed" from="Icons/Map" to="." method="_on_map_pressed"]
+[connection signal="pressed" from="Icons/VM" to="." method="_on_vm_pressed"]
+[connection signal="pressed" from="Icons/OrgChart" to="." method="_on_org_chart_pressed"]
+[connection signal="pressed" from="Icons/mapSmall" to="." method="_on_map_small_pressed"]
+[connection signal="pressed" from="Icons/VMSmall" to="." method="_on_vm_small_pressed"]
+[connection signal="pressed" from="Icons/OrgChartSmall" to="." method="_on_org_chart_small_pressed"]
+[connection signal="pressed" from="Icons/Notes" to="." method="_on_notes_pressed"]
+[connection signal="pressed" from="Icons/MessagesButton" to="." method="_on_messages_button_pressed"]
+[connection signal="mapTop" from="Applications/Map" to="." method="_on_map_map_top"]
+[connection signal="vmTop" from="Applications/VM" to="." method="_on_vm_vm_top"]
+[connection signal="orgTop" from="Applications/OrgChart" to="." method="_on_org_chart_org_top"]

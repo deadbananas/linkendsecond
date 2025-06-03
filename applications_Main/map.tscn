@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dv4yjf3t2twqj"]
+
+[ext_resource type="Script" path="res://applications_Main/map.gd" id="1_pvmt7"]
+[ext_resource type="PackedScene" uid="uid://bemndkmju8kvd" path="res://window.tscn" id="2_fd07r"]
+[ext_resource type="Texture2D" uid="uid://crmr4pw3s3bpm" path="res://assets/map/CsuiteMap.png" id="3_4sx5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn4gt"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcuyl"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epfxi"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrjl8"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o6sk"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vspe"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(1600, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq3xu"]
+atlas = ExtResource("3_4sx5h")
+region = Rect2(1920, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wq3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn4gt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcuyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epfxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrjl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o6sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vspe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq3xu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_pvmt7")
+
+[node name="Window" parent="." instance=ExtResource("2_fd07r")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(959, 498)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_7wq3t")

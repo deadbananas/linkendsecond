@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dibjfxk4wr5af"]
+
+[ext_resource type="Shader" path="res://screen.gdshader" id="1_4wa0q"]
+[ext_resource type="PackedScene" uid="uid://d3p77dmxw703m" path="res://computer.tscn" id="1_ta41t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6548l"]
+shader = ExtResource("1_4wa0q")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.155
+shader_parameter/scanlines_width = 0.041
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.386
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.3
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.47
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.02
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.427
+
+[node name="Game" type="Node2D"]
+
+[node name="EFFECT" type="ColorRect" parent="."]
+visible = false
+top_level = true
+material = SubResource("ShaderMaterial_6548l")
+offset_left = 144.0
+offset_top = 42.0
+offset_right = 1776.0
+offset_bottom = 960.0
+
+[node name="Computer" parent="." instance=ExtResource("1_ta41t")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0

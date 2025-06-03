@@ -1,0 +1,57 @@
+{
+	"sheets": [
+		{
+			"name": "hostnames",
+			"columns": [
+				{
+					"typeStr": "1",
+					"name": "Hostname",
+					"display": null
+				},
+				{
+					"typeStr": "8",
+					"name": "Link End Data"
+				}
+			],
+			"lines": [
+				{
+					"Hostname": "hadbiltmen00c01",
+					"Link End Data": [
+						{
+							"": 1
+						},
+						{
+							"": 0
+						},
+						{
+							"": 2
+						}
+					]
+				},
+				{
+					"Hostname": "sadasda",
+					"Link End Data": []
+				}
+			],
+			"separators": [],
+			"props": {}
+		},
+		{
+			"name": "hostnames@Link End Data",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "4",
+					"name": "",
+					"display": null
+				}
+			]
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}

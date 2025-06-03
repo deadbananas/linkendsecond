@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgxewtdquxhvj"]
+
+[ext_resource type="Texture2D" uid="uid://dky5lw4dow4ax" path="res://assets/computer/mapIcon.png" id="1_q1wac"]
+[ext_resource type="Texture2D" uid="uid://c4764ylqobodu" path="res://assets/computer/mapIconHover.png" id="2_s77k0"]
+
+[node name="Map" type="TextureButton"]
+offset_left = -132.667
+offset_top = -80.0
+offset_right = -100.667
+offset_bottom = -48.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_q1wac")
+texture_hover = ExtResource("2_s77k0")
+ignore_texture_size = true
+stretch_mode = 0
