@@ -66,9 +66,9 @@ script = ExtResource("1_pvmt7")
 
 [node name="Window" parent="." instance=ExtResource("2_fd07r")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Window"]
 texture_filter = 1
-position = Vector2(959, 498)
+position = Vector2(702, 306)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7wq3t")
 

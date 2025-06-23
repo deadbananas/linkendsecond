@@ -4,6 +4,7 @@ var draggingDistance
 var dir
 var dragging
 var newPosition = Vector2()
+@onready var ray_cast_2d = $RayCast2D
 
 var mouse_in = false
 
@@ -16,6 +17,7 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() && mouse_in:
+			top.emit()
 			draggingDistance = position.distance_to(get_viewport().get_mouse_position())
 			dir = (get_viewport().get_mouse_position() - position).normalized()
 			dragging = true
@@ -27,6 +29,7 @@ func _input(event):
 	elif event is InputEventMouseMotion:
 		if dragging:
 			newPosition = get_viewport().get_mouse_position() - draggingDistance * dir
+			top.emit()
 
 func _physics_process(delta):
 	if dragging:
@@ -43,14 +46,18 @@ func mouse_exited():
 # Optional, I have a close button to get rid of the UI element
 func _on_close_pressed():
 	closed.emit()
+		
+func clicked_in():
+	print("top")
+	top.emit()
+	if !mouse_in:
+		self.get_viewport().set_input_as_handled()
+	
 
-func _on_clicked_in_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		print("top")
-		top.emit()
-		if !mouse_in:
-			self.get_viewport().set_input_as_handled()
+
+func _on_clicked_in_1_pressed():
+	clicked_in()
 
 
-func _on_control_gui_input(event):
-	print(event)
+func _on_clicked_in_2_pressed():
+	clicked_in()
