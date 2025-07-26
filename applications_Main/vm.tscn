@@ -17,12 +17,14 @@ offset_left = 222.0
 offset_top = 36.0
 offset_right = 1182.0
 offset_bottom = 576.0
+mouse_filter = 2
 theme = ExtResource("3_7lt14")
 
 [node name="Control" type="Control" parent="Window/Control"]
 anchors_preset = 0
 offset_right = 960.0
 offset_bottom = 540.0
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Window/Control/Control"]
 layout_mode = 1
@@ -31,15 +33,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.709804, 0.647059, 0.619608, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Window/Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Window/Control/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 0
 
 [node name="Hostname_enter" type="LineEdit" parent="Window/Control/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(396.055, 0)

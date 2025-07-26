@@ -48,7 +48,6 @@ func _on_close_pressed():
 	closed.emit()
 		
 func clicked_in():
-	print("top")
 	top.emit()
 	if !mouse_in:
 		self.get_viewport().set_input_as_handled()

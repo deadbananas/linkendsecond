@@ -44,6 +44,7 @@ func _process(delta):
 	var j = appArray.size()
 	for i in appArray:
 		var temp : Node2D = appDict.get(i)
+		temp.get_parent().move_child(temp, j)
 		temp.z_index = j
 		j = j - 1
 	
